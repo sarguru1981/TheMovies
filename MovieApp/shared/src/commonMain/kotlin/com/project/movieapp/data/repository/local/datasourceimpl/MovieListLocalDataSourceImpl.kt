@@ -1,12 +1,9 @@
 package com.project.movieapp.data.repository.local.datasourceimpl
 
 import com.project.movie.database.MovieDatabase
-import com.project.movieapp.data.mappers.mapToMovieItem
-import com.project.movieapp.data.model.Movie
+import com.project.movieapp.data.mappers.asDomainMovieEntity
+import com.project.movieapp.domain.entity.Movie
 import com.project.movieapp.data.repository.local.datasource.MovieListLocalDataSource
-import com.squareup.sqldelight.runtime.coroutines.asFlow
-import com.squareup.sqldelight.runtime.coroutines.mapToList
-import kotlinx.coroutines.flow.Flow
 
 
 class MovieListLocalDataSourceImpl(MovieDatabase: MovieDatabase) : MovieListLocalDataSource {
@@ -26,7 +23,7 @@ class MovieListLocalDataSourceImpl(MovieDatabase: MovieDatabase) : MovieListLoca
         }
     }
 
-    override fun getMovieListFromLocal(): Flow<List<Movie>> {
-        return queries.getMovielist(::mapToMovieItem).asFlow().mapToList()
+    override fun getPopularMovieListFromLocal(): List<Movie> {
+        return queries.getMovielist(::asDomainMovieEntity).executeAsList()
     }
 }

@@ -1,9 +1,9 @@
 package com.project.movieapp.data.mappers
 
-import com.project.movieapp.data.model.Movie
+import com.project.movieapp.domain.entity.Movie
 
 
-fun mapToMovieItem(
+fun asDomainMovieEntity(
     id: Long,
     title: String,
     overview: String,
