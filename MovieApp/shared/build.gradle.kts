@@ -29,6 +29,12 @@ kotlin {
                 implementation(AppDependencies.SQLDELIGHT_COMMON)
                 implementation(AppDependencies.SQLDELIGHT_COROUTINES)
                 implementation(AppDependencies.KOTLINX_COROUTINES)
+                implementation(AppDependencies.KTOR_CLIENT_CORE)
+                implementation(AppDependencies.KTOR_CONTENT)
+                implementation(AppDependencies.KTOR_SERIALIZATION_JSON)
+                implementation(AppDependencies.KTOR_LOGGING)
+                implementation(AppDependencies.KOTLIN_SERIALIZE)
+
             }
         }
         val commonTest by getting {
@@ -39,6 +45,7 @@ kotlin {
         val androidMain by getting {
             dependencies {
                 implementation(AppDependencies.SQLDELIGHT_ANDROID)
+                implementation(AppDependencies.KTOR_CLIENT_OKHTTP)
             }
         }
         val androidUnitTest by getting
@@ -52,6 +59,7 @@ kotlin {
             iosSimulatorArm64Main.dependsOn(this)
             dependencies {
                 implementation(AppDependencies.SQLDELIGHT_IOS)
+                implementation(AppDependencies.KTOR_CLIENT_DARWIN)
             }
         }
         val iosX64Test by getting

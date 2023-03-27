@@ -11,4 +11,7 @@ object BuildDependencyVersions {
     const val  SQLDELIGHT_VERSION = "1.5.5"
 
     const val  COROUTINES_VERSION = "1.6.4"
+
+    const val KTOR_VERSION = "2.2.4"
+    const val SERIALIZE_VERSION = "1.4.1"
 }
