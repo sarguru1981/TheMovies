@@ -1,4 +1,4 @@
-package com.project.movieapp.data.model
+package com.project.movieapp.domain.entity
 
 data class Movie(
     val id: Long?,
