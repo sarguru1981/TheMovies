@@ -4,7 +4,7 @@ import com.project.movieapp.domain.entity.Movie
 
 interface MovieListLocalDataSource {
 
-    fun insertMovieListToDB(MovieItem: List<Movie>)
+    fun insertMovieListToDB(movies: List<Movie>)
     fun getPopularMovieListFromLocal(): List<Movie>
 
 }

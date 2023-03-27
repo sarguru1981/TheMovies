@@ -42,4 +42,6 @@ dependencies {
     implementation(project(BuildModules.SHARED_MODULE))
 
     addDependenciesForCompose()
+
+    implementation(AppDependencies.COROUTINES_ANDROID)
 }

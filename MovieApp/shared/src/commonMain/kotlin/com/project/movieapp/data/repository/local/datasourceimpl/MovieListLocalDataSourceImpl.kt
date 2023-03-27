@@ -9,15 +9,15 @@ import com.project.movieapp.data.repository.local.datasource.MovieListLocalDataS
 class MovieListLocalDataSourceImpl(MovieDatabase: MovieDatabase) : MovieListLocalDataSource {
     private val queries = MovieDatabase.movieDatabaseQueries
 
-    override fun insertMovieListToDB(movieList: List<Movie>) {
-        for (movieItem in movieList) {
+    override fun insertMovieListToDB(movies: List<Movie>) {
+        for (movie in movies) {
             queries.transaction {
                 queries.insertMovielist(
-                    id = movieItem.id,
-                    title = movieItem.title,
-                    overview = movieItem.overview,
-                    popularity = movieItem.popularity.toLong(),
-                    poster_path = movieItem.poster_path
+                    id = movie.id,
+                    title = movie.title,
+                    overview = movie.overview,
+                    popularity = movie.popularity,
+                    poster_path = movie.poster_path
                 )
             }
         }
