@@ -44,4 +44,6 @@ dependencies {
     addDependenciesForCompose()
 
     implementation(AppDependencies.COROUTINES_ANDROID)
+
+    implementation(AppDependencies.KOIN_ANDROID)
 }

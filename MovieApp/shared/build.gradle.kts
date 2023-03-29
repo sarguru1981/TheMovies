@@ -34,6 +34,7 @@ kotlin {
                 implementation(AppDependencies.KTOR_SERIALIZATION_JSON)
                 implementation(AppDependencies.KTOR_LOGGING)
                 implementation(AppDependencies.KOTLIN_SERIALIZE)
+                implementation(AppDependencies.KOIN_CORE)
 
             }
         }

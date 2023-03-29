@@ -1,13 +1,18 @@
 package com.project.movieapp.data.repository.local.datasourceimpl
 
 import com.project.movie.database.MovieDatabase
+import com.project.movieapp.data.factory.DriverFactory
 import com.project.movieapp.data.mappers.asDomainMovieEntity
 import com.project.movieapp.domain.entity.Movie
 import com.project.movieapp.data.repository.local.datasource.MovieListLocalDataSource
 
 
-class MovieListLocalDataSourceImpl(MovieDatabase: MovieDatabase) : MovieListLocalDataSource {
-    private val queries = MovieDatabase.movieDatabaseQueries
+class MovieListLocalDataSourceImpl(
+    driverFactory: DriverFactory) : MovieListLocalDataSource {
+
+    private val database =
+        MovieDatabase.invoke(driverFactory.createDriver())
+    private val queries = database.movieDatabaseQueries
 
     override fun insertMovieListToDB(movies: List<Movie>) {
         for (movie in movies) {

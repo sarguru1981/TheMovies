@@ -34,4 +34,8 @@ object AppDependencies {
 
     //Others
     const val KOTLIN_SERIALIZE = "org.jetbrains.kotlinx:kotlinx-serialization-core:${BuildDependencyVersions.SERIALIZE_VERSION}"
+
+    //Koin
+    const val KOIN_ANDROID = "io.insert-koin:koin-android:${BuildDependencyVersions.KOIN_VERSION}"
+    const val KOIN_CORE = "io.insert-koin:koin-core:${BuildDependencyVersions.KOIN_VERSION}"
 }
