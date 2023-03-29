@@ -14,4 +14,6 @@ object BuildDependencyVersions {
 
     const val KTOR_VERSION = "2.2.4"
     const val SERIALIZE_VERSION = "1.4.1"
+
+    const val KOIN_VERSION = "3.3.3"
 }
