@@ -1,5 +1,6 @@
 package com.project.movieapp.di
 
+import com.project.movieapp.data.repository.cache.PreferenceDataStore
 import com.project.movieapp.data.repository.local.datasource.MovieListLocalDataSource
 import com.project.movieapp.data.repository.local.datasourceimpl.MovieListLocalDataSourceImpl
 import com.project.movieapp.data.repository.remote.datasource.MovieListRemoteDataSource
@@ -19,6 +20,7 @@ fun initKoin(appDeclaration: KoinAppDeclaration = {}) =
 
 
 val dataSourceModule = module {
-    single<MovieListRemoteDataSource> { MovieListRemoteDataSourceImpl(get())}
+    single<MovieListRemoteDataSource> { MovieListRemoteDataSourceImpl(get()) }
     single<MovieListLocalDataSource> { MovieListLocalDataSourceImpl(get()) }
+    single { PreferenceDataStore(get()) }
 }

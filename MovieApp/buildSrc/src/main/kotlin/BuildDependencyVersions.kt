@@ -16,4 +16,7 @@ object BuildDependencyVersions {
     const val SERIALIZE_VERSION = "1.4.1"
 
     const val KOIN_VERSION = "3.3.3"
+
+    const val DATASTORE_VERSION = "1.1.0-alpha03"
+    const val GSON_VERSION = "2.9.0"
 }
