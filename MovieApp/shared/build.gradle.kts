@@ -35,7 +35,8 @@ kotlin {
                 implementation(AppDependencies.KTOR_LOGGING)
                 implementation(AppDependencies.KOTLIN_SERIALIZE)
                 implementation(AppDependencies.KOIN_CORE)
-
+                implementation(AppDependencies.ANDROID_PREF_DATASTORE)
+                implementation (AppDependencies.GSON)
             }
         }
         val commonTest by getting {

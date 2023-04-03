@@ -38,4 +38,10 @@ object AppDependencies {
     //Koin
     const val KOIN_ANDROID = "io.insert-koin:koin-android:${BuildDependencyVersions.KOIN_VERSION}"
     const val KOIN_CORE = "io.insert-koin:koin-core:${BuildDependencyVersions.KOIN_VERSION}"
+
+    //DataStore
+    const val ANDROID_PREF_DATASTORE = "androidx.datastore:datastore-preferences:${BuildDependencyVersions.DATASTORE_VERSION}"
+
+    //GSON
+    const val GSON = "com.google.code.gson:gson:${BuildDependencyVersions.GSON_VERSION}"
 }
