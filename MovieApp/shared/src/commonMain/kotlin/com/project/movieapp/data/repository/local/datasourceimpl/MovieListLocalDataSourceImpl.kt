@@ -28,6 +28,10 @@ class MovieListLocalDataSourceImpl(
         }
     }
 
+    override fun deleteMovieListFromDB() {
+        queries.removeMovielist()
+    }
+
     override fun getPopularMovieListFromLocal(): List<Movie> {
         return queries.getMovielist(::asDomainMovieEntity).executeAsList()
     }
