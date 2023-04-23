@@ -1,6 +1,5 @@
 package com.project.movieapp.data.repository
 
-import com.project.movieapp.data.base.Response
 import com.project.movieapp.data.repository.cache.PreferenceDataStore
 import com.project.movieapp.data.repository.local.datasource.MovieListLocalDataSource
 import com.project.movieapp.data.repository.remote.datasource.MovieListRemoteDataSource
@@ -14,7 +13,7 @@ class MovieListRepositoryImpl(
     private val preferenceDataStore: PreferenceDataStore
 ) : MovieListRepository {
 
-    override suspend fun getPopularMovieList(url: String, page: Int): Flow<Response<List<Movie>>> =
+    override fun getPopularMovieList(url: String, page: Int): Flow<List<Movie>> =
         singleSourceOfTruth(
             getLocalData = { getPopularMovieListFromLocal() },
             getRemoteData = {

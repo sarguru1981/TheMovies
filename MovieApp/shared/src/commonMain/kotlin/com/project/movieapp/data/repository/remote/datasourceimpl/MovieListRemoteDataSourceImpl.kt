@@ -1,6 +1,5 @@
 package com.project.movieapp.data.repository.remote.datasourceimpl
 
-import com.project.movieapp.data.factory.ApiService
 import com.project.movieapp.data.model.MovieResponseDTO
 import com.project.movieapp.data.repository.remote.datasource.MovieListRemoteDataSource
 import com.project.movieapp.data.util.APIConstants
