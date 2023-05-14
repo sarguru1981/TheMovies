@@ -45,5 +45,11 @@ dependencies {
 
     implementation(AppDependencies.COROUTINES_ANDROID)
 
-    implementation(AppDependencies.KOIN_ANDROID)
+    implementation(AppDependencies.KOIN_ANDROID_COMPOSE)
+
+    implementation(AppDependencies.COIL)
+
+    implementation(AppDependencies.NAVIGATION)
+
+    implementation(AppDependencies.CONSTRAINT)
 }

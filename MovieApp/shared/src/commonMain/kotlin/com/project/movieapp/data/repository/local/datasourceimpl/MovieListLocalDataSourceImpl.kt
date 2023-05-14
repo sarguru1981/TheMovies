@@ -21,7 +21,7 @@ class MovieListLocalDataSourceImpl(
                     id = movie.id,
                     title = movie.title,
                     overview = movie.overview,
-                    popularity = movie.popularity,
+                    popularity = movie.popularity.toLong(),
                     poster_path = movie.poster_path
                 )
             }

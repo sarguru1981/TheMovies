@@ -6,6 +6,7 @@
     <application
         android:name=".android.MovieApplication"
         android:allowBackup="false"
+        android:label="The Movies"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity

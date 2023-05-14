@@ -9,6 +9,7 @@ plugins {
 buildscript {
     dependencies {
         classpath (BuildPlugins.SQLDELIGHT_GRADLE_PLUGIN)
+        classpath (BuildPlugins.SERIALIZATION_PLUGIN)
     }
 }
 

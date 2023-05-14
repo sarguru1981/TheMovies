@@ -8,4 +8,7 @@ object BuildPlugins {
     const val SQLDELIGHT_GRADLE_PLUGIN = "com.squareup.sqldelight:gradle-plugin:${BuildDependencyVersions.SQLDELIGHT_VERSION}"
     const val SQLDELIGHT_PLUGIN = "com.squareup.sqldelight"
 
+    // Serialization
+    const val SERIALIZATION_PLUGIN = "org.jetbrains.kotlin:kotlin-serialization:${BuildDependencyVersions.SERIALIZE_PLUGIN_VERSION}"
+    const val SERIALIZE_PLUGIN = "plugin.serialization"
 }

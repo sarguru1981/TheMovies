@@ -16,19 +16,3 @@ actual class DriverFactory {
         return NativeSqliteDriver(MovieDatabase.Schema,"MovieDatabase.db")
     }
 }
-
-actual class ApiService {
-    actual fun build(): HttpClient {
-        return HttpClient(Darwin) {
-            engine {
-                configureRequest {
-                    setAllowsCellularAccess(true)
-                }
-            }
-            install(Logging) {
-                logger = Logger.DEFAULT
-                level = LogLevel.ALL
-            }
-        }
-    }
-}
