@@ -24,13 +24,13 @@ object AppDependencies {
     const val KTOR_CONTENT = "io.ktor:ktor-client-content-negotiation:${BuildDependencyVersions.KTOR_VERSION}"
     const val KTOR_SERIALIZATION_JSON = "io.ktor:ktor-serialization-kotlinx-json:${BuildDependencyVersions.KTOR_VERSION}"
     const val KTOR_LOGGING = "io.ktor:ktor-client-logging:${BuildDependencyVersions.KTOR_VERSION}"
+    const val KTOR_CLIENT_JSON = "io.ktor:ktor-client-json:${BuildDependencyVersions.KTOR_VERSION}"
 
     //Ktor-Android
-    const val KTOR_CLIENT_OKHTTP = "io.ktor:ktor-client-okhttp:${BuildDependencyVersions.KTOR_VERSION}"
-
+    const val KTOR_CLIENT_OKHTTP = "io.ktor:ktor-client-android:${BuildDependencyVersions.KTOR_VERSION}"
 
     //Ktor-IOS
-    const val KTOR_CLIENT_DARWIN = "io.ktor:ktor-client-darwin:${BuildDependencyVersions.KTOR_VERSION}"
+    const val KTOR_CLIENT_IOS = "io.ktor:ktor-client-ios:${BuildDependencyVersions.KTOR_VERSION}"
 
     //Others
     const val KOTLIN_SERIALIZE = "org.jetbrains.kotlinx:kotlinx-serialization-core:${BuildDependencyVersions.SERIALIZE_VERSION}"
@@ -38,10 +38,23 @@ object AppDependencies {
     //Koin
     const val KOIN_ANDROID = "io.insert-koin:koin-android:${BuildDependencyVersions.KOIN_VERSION}"
     const val KOIN_CORE = "io.insert-koin:koin-core:${BuildDependencyVersions.KOIN_VERSION}"
+    const val KOIN_ANDROID_COMPOSE = "io.insert-koin:koin-androidx-compose:${BuildDependencyVersions.KOIN_COMPOSE_VERSION}"
 
     //DataStore
     const val ANDROID_PREF_DATASTORE = "androidx.datastore:datastore-preferences:${BuildDependencyVersions.DATASTORE_VERSION}"
 
     //GSON
     const val GSON = "com.google.code.gson:gson:${BuildDependencyVersions.GSON_VERSION}"
+
+    //MOKO MVVM
+    const val MOKO_MVVM = "dev.icerock.moko:mvvm-core:${BuildDependencyVersions.MOKO_MVVM_VERSION}"
+
+    //COIL
+    const val COIL = "io.coil-kt:coil-compose:${BuildDependencyVersions.COIL_VERSION}"
+
+    //NAVIGATION
+    const val NAVIGATION = "androidx.navigation:navigation-compose:${BuildDependencyVersions.NAVIGATION_VERSION}"
+
+    //CONSTRAINT
+    const val CONSTRAINT = "androidx.constraintlayout:constraintlayout-compose:${BuildDependencyVersions.CONSTRAINT_VERSION}"
 }

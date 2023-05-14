@@ -2,6 +2,7 @@ plugins {
     kotlin(BuildPlugins.MULTIPLATFORM)
     id(BuildPlugins.ANDROID_LIBRARY)
     id(BuildPlugins.SQLDELIGHT_PLUGIN)
+    kotlin(BuildPlugins.SERIALIZE_PLUGIN)
 }
 
 kotlin {
@@ -33,10 +34,12 @@ kotlin {
                 implementation(AppDependencies.KTOR_CONTENT)
                 implementation(AppDependencies.KTOR_SERIALIZATION_JSON)
                 implementation(AppDependencies.KTOR_LOGGING)
+                implementation(AppDependencies.KTOR_CLIENT_JSON)
                 implementation(AppDependencies.KOTLIN_SERIALIZE)
                 implementation(AppDependencies.KOIN_CORE)
                 implementation(AppDependencies.ANDROID_PREF_DATASTORE)
                 implementation(AppDependencies.GSON)
+                api(AppDependencies.MOKO_MVVM)
             }
         }
         val commonTest by getting {
@@ -48,6 +51,7 @@ kotlin {
             dependencies {
                 implementation(AppDependencies.SQLDELIGHT_ANDROID)
                 implementation(AppDependencies.KTOR_CLIENT_OKHTTP)
+                implementation(AppDependencies.KOIN_ANDROID_COMPOSE)
             }
         }
         val androidUnitTest by getting
@@ -61,7 +65,7 @@ kotlin {
             iosSimulatorArm64Main.dependsOn(this)
             dependencies {
                 implementation(AppDependencies.SQLDELIGHT_IOS)
-                implementation(AppDependencies.KTOR_CLIENT_DARWIN)
+                implementation(AppDependencies.KTOR_CLIENT_IOS)
             }
         }
         val iosX64Test by getting

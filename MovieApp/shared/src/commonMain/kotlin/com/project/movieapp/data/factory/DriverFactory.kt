@@ -7,7 +7,3 @@ import io.ktor.client.HttpClient
 expect class DriverFactory {
     fun createDriver(): SqlDriver
 }
-
-expect class ApiService() {
-    fun build(): HttpClient
-}

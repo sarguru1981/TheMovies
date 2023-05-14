@@ -55,8 +55,7 @@ actual inline fun <reified T> Context.getListData(key: String): Flow<List<T>> {
     }.map { preferences ->
         val jsonString = preferences[stringPreferencesKey(key)] ?: ""
         val type = object : TypeToken<List<T>>() {}.type
-        val elements = GsonBuilder().create().fromJson<List<T>>(jsonString, type)
-        elements
+        GsonBuilder().create().fromJson(jsonString, type) ?: emptyList()
     }
 }
 
