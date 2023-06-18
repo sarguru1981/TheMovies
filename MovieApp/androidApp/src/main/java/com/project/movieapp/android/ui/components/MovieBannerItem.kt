@@ -40,7 +40,7 @@ fun MovieBannerItem(
                 .clip(RoundedCornerShape(8.dp)),
             contentDescription = null,
             alignment = Alignment.TopCenter,
-            contentScale = ContentScale.Crop,
+            contentScale = ContentScale.Crop
         )
         Spacer(modifier = Modifier.height(4.dp))
         Text(

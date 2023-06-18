@@ -7,7 +7,7 @@ import com.project.movieapp.data.repository.local.datasource.MovieListLocalDataS
 import com.project.movieapp.data.repository.local.datasourceimpl.MovieListLocalDataSourceImpl
 import com.project.movieapp.data.repository.remote.datasource.MovieListRemoteDataSource
 import com.project.movieapp.data.repository.remote.datasourceimpl.MovieListRemoteDataSourceImpl
-import com.project.movieapp.domain.repository.MovieListRepository
+import com.project.movieapp.data.repository.MovieListRepository
 import com.project.movieapp.domain.usecases.MovieListUseCase
 import io.ktor.client.HttpClient
 import io.ktor.client.plugins.contentnegotiation.ContentNegotiation

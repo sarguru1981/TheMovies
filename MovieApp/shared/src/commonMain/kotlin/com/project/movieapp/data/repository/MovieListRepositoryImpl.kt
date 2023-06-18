@@ -5,10 +5,7 @@ import com.project.movieapp.data.repository.cache.PreferenceDataStore
 import com.project.movieapp.data.repository.local.datasource.MovieListLocalDataSource
 import com.project.movieapp.data.repository.remote.datasource.MovieListRemoteDataSource
 import com.project.movieapp.domain.entity.Movie
-import com.project.movieapp.domain.repository.MovieListRepository
 import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.cancellable
-import kotlinx.coroutines.flow.flow
 
 class MovieListRepositoryImpl(
     private val movieListRemoteDataSource: MovieListRemoteDataSource,

@@ -22,8 +22,6 @@ import coil.compose.AsyncImage
 import coil.request.ImageRequest
 import coil.size.Scale
 import com.project.movieapp.domain.entity.Movie
-import java.text.SimpleDateFormat
-
 
 @Composable
 fun MovieDetailComponent(movie: Movie) {
@@ -46,7 +44,7 @@ fun MovieDetailComponent(movie: Movie) {
                 .clip(RoundedCornerShape(6.dp)),
             contentDescription = null,
             alignment = Alignment.TopCenter,
-            contentScale = ContentScale.Crop,
+            contentScale = ContentScale.Crop
         )
         Text(
             text = movie.title,
@@ -61,7 +59,7 @@ fun MovieDetailComponent(movie: Movie) {
             color = MaterialTheme.colors.onSurface,
             style = MaterialTheme.typography.body2,
             textAlign = TextAlign.Left,
-            fontWeight = FontWeight.SemiBold,
+            fontWeight = FontWeight.SemiBold
         )
         Text(
             text = "Popularity is ${movie.popularity}",
@@ -75,7 +73,7 @@ fun MovieDetailComponent(movie: Movie) {
                 },
             color = MaterialTheme.colors.onSurface,
             style = MaterialTheme.typography.caption,
-            textAlign = TextAlign.Left,
+            textAlign = TextAlign.Left
         )
         Text(
             text = movie.overview,
@@ -89,8 +87,7 @@ fun MovieDetailComponent(movie: Movie) {
                 },
             color = MaterialTheme.colors.onSurface,
             style = MaterialTheme.typography.caption,
-            textAlign = TextAlign.Left,
+            textAlign = TextAlign.Left
         )
     }
-
 }

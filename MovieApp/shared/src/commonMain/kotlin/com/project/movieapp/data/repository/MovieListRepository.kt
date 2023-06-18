@@ -1,4 +1,4 @@
-package com.project.movieapp.domain.repository
+package com.project.movieapp.data.repository
 
 import com.project.movieapp.domain.entity.Movie
 import kotlinx.coroutines.flow.Flow

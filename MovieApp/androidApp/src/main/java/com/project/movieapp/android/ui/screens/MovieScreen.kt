@@ -24,8 +24,8 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import com.project.movieapp.android.ui.components.MovieDetailComponent
 import com.project.movieapp.android.ui.components.MoviePlaySection
-import com.project.movieapp.presentation.feature.movielist.MovieListState
 import com.project.movieapp.domain.entity.Movie
+import com.project.movieapp.presentation.feature.movielist.MovieListState
 import com.project.movieapp.presentation.feature.movielist.MovieListViewModel
 import org.koin.androidx.compose.getViewModel
 
@@ -37,7 +37,7 @@ fun MovieScreen(viewModel: MovieListViewModel = getViewModel()) {
         modifier = Modifier
             .fillMaxSize()
             .background(Color.Black)
-            .statusBarsPadding(),
+            .statusBarsPadding()
     ) {
         val modifier = Modifier.padding(it)
         when (val async = moviesAsync) {
@@ -60,7 +60,8 @@ fun MovieScreen(viewModel: MovieListViewModel = getViewModel()) {
 
 @Composable
 fun ErrorScreen(
-    modifier: Modifier = Modifier, onTryAgain: () -> Unit
+    modifier: Modifier = Modifier,
+    onTryAgain: () -> Unit
 ) {
     Column(
         modifier
@@ -72,7 +73,7 @@ fun ErrorScreen(
         Text(
             text = ":(",
             style = MaterialTheme.typography.h4,
-            fontWeight = FontWeight.Black,
+            fontWeight = FontWeight.Black
         )
         Spacer(
             modifier = Modifier.height(16.dp)
@@ -108,13 +109,12 @@ fun LoadingScreen(
             text = "Loading ...."
         )
     }
-
 }
-
 
 @Composable
 fun ContentScreen(
-    modifier: Modifier = Modifier, movies: List<Movie>,
+    modifier: Modifier = Modifier,
+    movies: List<Movie>,
     selectedMovie: Movie,
     onMovieSelected: (Movie) -> Unit
 ) {
@@ -122,7 +122,7 @@ fun ContentScreen(
         MoviePlaySection(
             title = "Now Playing",
             subtitle = "Watch your favorites movie of the year",
-            movies = movies,
+            movies = movies
         ) {
             onMovieSelected.invoke(it)
         }
@@ -132,7 +132,7 @@ fun ContentScreen(
             color = MaterialTheme.colors.onSurface,
             style = MaterialTheme.typography.body1,
             textAlign = TextAlign.Left,
-            fontWeight = FontWeight.SemiBold,
+            fontWeight = FontWeight.SemiBold
         )
         if (selectedMovie.id != 0L) {
             MovieDetailComponent(movie = selectedMovie)

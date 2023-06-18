@@ -34,25 +34,24 @@ fun MoviePlaySection(
         Text(
             text = title,
             modifier = Modifier
-
                 .padding(top = 8.dp, start = 16.dp),
             color = MaterialTheme.colors.onSurface,
             style = MaterialTheme.typography.body1,
             textAlign = TextAlign.Left,
-            fontWeight = FontWeight.SemiBold,
+            fontWeight = FontWeight.SemiBold
         )
         if (subtitle.isEmpty().not()) {
             Text(
-                text = subtitle, modifier = Modifier
-
-                    .padding(start = 16.dp), color = MaterialTheme.colors.onSurface.copy(0.5f),
+                text = subtitle,
+                modifier = Modifier
+                    .padding(start = 16.dp),
+                color = MaterialTheme.colors.onSurface.copy(0.5f),
                 style = MaterialTheme.typography.body2,
                 textAlign = TextAlign.Left
             )
         }
         LazyRow(
             modifier = Modifier
-
                 .padding(top = 8.dp)
                 .fillMaxWidth(),
             state = gridState,
@@ -65,7 +64,7 @@ fun MoviePlaySection(
                         onItemClicked.invoke(item)
                     },
                     posterUrl = item.poster_path,
-                    title = item.title,
+                    title = item.title
                 )
             }
         }

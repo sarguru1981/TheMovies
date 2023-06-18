@@ -1,6 +1,7 @@
 plugins {
     id(BuildPlugins.ANDROID_APPLICATION)
     kotlin(BuildPlugins.ANDROID)
+    id("org.jlleitschuh.gradle.ktlint")
 }
 
 android {
@@ -52,4 +53,9 @@ dependencies {
     implementation(AppDependencies.NAVIGATION)
 
     implementation(AppDependencies.CONSTRAINT)
+}
+
+ktlint {
+    android.set(true)
+    outputColorName.set("RED")
 }

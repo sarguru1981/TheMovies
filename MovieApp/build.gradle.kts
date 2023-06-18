@@ -7,9 +7,11 @@ plugins {
 }
 
 buildscript {
+
     dependencies {
         classpath (BuildPlugins.SQLDELIGHT_GRADLE_PLUGIN)
         classpath (BuildPlugins.SERIALIZATION_PLUGIN)
+        classpath ("org.jlleitschuh.gradle:ktlint-gradle:11.3.2")
     }
 }
 
